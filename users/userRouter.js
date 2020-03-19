@@ -33,11 +33,19 @@ router.put('/:id', (req, res) => {
 //custom middleware
 
 function validateUserId(req, res, next) {
-  // do your magic!
+  if (req.url === '/mellon'){
+    next();
+  }else{
+    res.send("No pass");
+  }
 }
 
 function validateUser(req, res, next) {
-  // do your magic!
+  if (req.url === '/mellon'){
+    next();
+  }else{
+    res.send("No pass");
+  }
 }
 
 function validatePost(req, res, next) {
